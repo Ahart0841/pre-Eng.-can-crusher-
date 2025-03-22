@@ -1,3 +1,5 @@
+//REMOVE LINE 34&38 IF PROBLEM
+// check 34&38 for corrext logic
 #include <esp_now.h>
 #include <WiFi.h>
 
@@ -31,9 +33,11 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *incoming
   if (myData.pistonstate) {
     digitalWrite(Mainpiston, HIGH);
     Serial.println("Piston is active");
+    greenled = false; //REMOVE IT PROBLEM
   } else {
     digitalWrite(Mainpiston, LOW);
     Serial.println("Piston is standby");
+    greenled = TRUE; //REMOVE LINE 34&38 IF PROBLEM
   }
 }
 

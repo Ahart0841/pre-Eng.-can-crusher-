@@ -70,6 +70,13 @@ void setup() {
         Serial.println("Failed to add peer");
         return;
     }
+    display.clearDisplay();
+        display.setTextSize(2);
+        display.setTextColor(SSD1306_WHITE);
+        display.setCursor(0, 20);
+        display.println(F("WIRELESS CTRL"));
+        display.display();
+    
 }
 
 void loop() {

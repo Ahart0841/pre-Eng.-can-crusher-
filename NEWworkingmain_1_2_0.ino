@@ -108,8 +108,6 @@ void loop() {
     retractpiston();
     greenled = true;
     emergencyTriggered = true;  // Set flag so it stays ON
-
-  }
   }
 }
 
